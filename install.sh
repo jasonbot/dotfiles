@@ -12,12 +12,18 @@ git pull
 
 OS=`uname`
 
+function install_homebrew {
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+}
+
 if [ $OS == "Linux" ]
 then
     folder="linux"
 elif [ $OS == "Darwin" ]
 then
     folder="osx"
+
+    install_homebrew
 else
     echo "THIS OS IS BAD AND YOU SHOULD FEEL BAD"
     exit 1
