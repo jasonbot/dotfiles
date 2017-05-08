@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/jscheirer/projects/terraform-aws/configs/nwdev/stage'
+let g:netrw_dirhist_2='/Users/jscheirer/projects/museum/src/museum/flask_app'
+let g:netrw_dirhist_3='/Users/jscheirer/.conan/data/statsd-client/1.0.0/nerdwallet/stable/package/7586e5a72612387c5beb630c8ff07f1a397d08b6/lib'

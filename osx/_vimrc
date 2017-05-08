@@ -1,0 +1,16 @@
+set backspace=indent,eol,start
+set encoding=utf-8
+set visualbell
+set number
+set wrap
+set linebreak
+set textwidth=80
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set shiftround
+set autoindent
+filetype plugin indent on
+colorscheme zenburn
+syntax on
