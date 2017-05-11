@@ -14,6 +14,13 @@ OS=`uname`
 
 function install_homebrew {
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+    for package in $(cat osx_homebrew_packages.txt)
+    do
+        brew install $package
+    done
+
+    pip install --user powerline-status
 }
 
 if [ $OS == "Linux" ]
