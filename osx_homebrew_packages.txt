@@ -3,7 +3,6 @@ awscli
 bash-completion
 bash-git-prompt
 cmake
-conan
 fortune
 git
 go
