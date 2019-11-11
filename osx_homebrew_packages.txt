@@ -8,7 +8,7 @@ git
 go
 lua
 node
-python@3
+python
 the_silver_searcher
 tmux
 toilet

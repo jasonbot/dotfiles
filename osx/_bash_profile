@@ -1,10 +1,5 @@
-alias tfplan='terraformpy plan -out=tf.plan'
-alias tfapply='terraform apply tf.plan'
-
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$(go env GOPATH)
-
-eval "$(chef shell-init bash)"
 
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
