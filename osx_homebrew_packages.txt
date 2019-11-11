@@ -8,6 +8,7 @@ git
 go
 lua
 node
+rust
 python
 the_silver_searcher
 tmux
