@@ -1,3 +1,4 @@
+arcanist
 autoconf
 awscli
 bash-completion
