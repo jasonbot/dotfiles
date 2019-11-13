@@ -1,0 +1,19 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/bin
+
+export PATH
+
+tmux ls
+if [ $? -eq 0 ]
+then
+   echo "I see an existing TMUX session. Use tmux attach to grab it."
+fi
+
