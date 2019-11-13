@@ -11,7 +11,18 @@ PATH=$PATH:$HOME/bin
 
 export PATH
 
-tmux ls
+grep -i "centos release 6" /etc/system-release > /dev/null
+if [ $? -eq 0 ]
+then
+   if [ ! -f ~/.centos-6-warning ]
+   then
+     echo "This is CentOS 6. Remember to do the workaround at"
+     echo "https://code.visualstudio.com/docs/remote/linux#_updating-glibc-and-libstdc-on-rhel-centos-6"
+     touch ~/.centos-6-warning
+   fi
+fi
+
+tmux ls > /dev/null
 if [ $? -eq 0 ]
 then
    echo "I see an existing TMUX session. Use tmux attach to grab it."
