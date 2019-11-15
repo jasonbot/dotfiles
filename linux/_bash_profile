@@ -11,6 +11,7 @@ PATH=$PATH:$HOME/bin
 
 export PATH
 
+# CentOS 6.X needs a newer glibc to run the VS Code Remote Plugin
 grep -i "centos release 6" /etc/system-release > /dev/null
 if [ $? -eq 0 ]
 then
@@ -22,9 +23,15 @@ then
    fi
 fi
 
+# List TMUX sessions, if one exists and $TMUX is unset remind me
 tmux ls > /dev/null
 if [ $? -eq 0 ]
 then
-   echo "I see an existing TMUX session. Use tmux attach to grab it."
+    if [ f$TMUX == f"" ]
+    then
+        echo ".-------------------------------------------------------------."
+        echo "| I see an existing TMUX session. Use tmux attach to grab it. |"
+        echo "'-------------------------------------------------------------'"
+    fi
 fi
 
