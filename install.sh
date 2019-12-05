@@ -28,6 +28,10 @@ then
     folder="linux"
 elif [ $OS == "Darwin" ]
 then
+    # The only good minimize effect
+    defaults write com.apple.dock mineffect -string suck
+    killall Dock
+
     folder="osx"
 
     install_homebrew
