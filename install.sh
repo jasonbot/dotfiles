@@ -4,13 +4,30 @@ echo HERE WE GO
 cd ~
 if [ ! -d dotfiles ]
 then
-    git clone git@github.com:jasonbot/dotfiles.git
+    if ! git clone git@github.com:jasonbot/dotfiles.git
+    then
+        echo "SSH/GitHub is not set up; using HTTPS (CRAP)"
+        git clone https://github.com/jasonbot/dotfiles.git
+    fi
 fi
 
 cd dotfiles
 git pull
 
 OS=`uname`
+
+function configure_git() {
+    git config --global --replace-all core.pager "less -F -X"
+    git config --global --replace-all user.name "Jason Scheirer"
+    if which vim
+    then
+        git config --global core.editor vim
+    else
+        echo "NO VIM?"
+    fi
+    git config --global --replace-all user.email "jason.scheirer@gmail.com"
+    echo REMEMBER TO git config --global --replace-all user.email "work@email.com"
+}
 
 function install_homebrew {
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -22,6 +39,8 @@ function install_homebrew {
 
     pip3 install --user powerline-status
 }
+
+configure_git
 
 if [ $OS == "Linux" ]
 then
