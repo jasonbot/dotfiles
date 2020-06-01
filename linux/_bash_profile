@@ -32,6 +32,13 @@ then
         echo ".-------------------------------------------------------------."
         echo "| I see an existing TMUX session. Use tmux attach to grab it. |"
         echo "'-------------------------------------------------------------'"
+	
+        if [ f$SSH_AUTH_SOCK != f"" ]
+        then
+            echo
+            echo "Remember to export SSH_AUTH_SOCK=$SSH_AUTH_SOCK in any open panes"
+            echo
+        fi
     fi
 fi
 
