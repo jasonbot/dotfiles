@@ -11,33 +11,20 @@ PATH=$PATH:$HOME/bin
 
 export PATH
 
-# CentOS 6.X needs a newer glibc to run the VS Code Remote Plugin
-grep -i "centos release 6" /etc/system-release > /dev/null
-if [ $? -eq 0 ]
-then
-   if [ ! -f ~/.centos-6-warning ]
-   then
-     echo "This is CentOS 6. Remember to do the workaround at"
-     echo "https://code.visualstudio.com/docs/remote/linux#_updating-glibc-and-libstdc-on-rhel-centos-6"
-     touch ~/.centos-6-warning
-   fi
-fi
-
 # List TMUX sessions, if one exists and $TMUX is unset remind me
-tmux ls > /dev/null
+tmux ls > /dev/null 2> /dev/null
 if [ $? -eq 0 ]
 then
     if [ f$TMUX == f"" ]
     then
-        echo ".-------------------------------------------------------------."
-        echo "| I see an existing TMUX session. Use tmux attach to grab it. |"
-        echo "'-------------------------------------------------------------'"
+        echo ".---------------------------------------------------------------------------------------------------."
+        echo "| I see an existing TMUX session. Use tmux attach to grab it.                                       |"
+        echo "'---------------------------------------------------------------------------------------------------'"
 	
         if [ f$SSH_AUTH_SOCK != f"" ]
         then
-            echo
-            echo "Remember to export SSH_AUTH_SOCK=$SSH_AUTH_SOCK in any open panes"
-            echo
+            printf "| export SSH_AUTH_SOCK=%-57s in any open panes  |\n" $SSH_AUTH_SOCK
+            echo "'---------------------------------------------------------------------------------------------------'"
         fi
     fi
 fi
