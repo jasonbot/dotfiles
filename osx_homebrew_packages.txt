@@ -9,6 +9,7 @@ git
 go
 lua
 node
+rg
 rust
 python
 the_silver_searcher

@@ -12,5 +12,4 @@ set expandtab
 set shiftround
 set autoindent
 filetype plugin indent on
-colorscheme zenburn
 syntax on

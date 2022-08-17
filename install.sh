@@ -1,22 +1,10 @@
 #! /bin/bash
 
-echo HERE WE GO
-cd ~
-if [ ! -d dotfiles ]
-then
-    if ! git clone git@github.com:jasonbot/dotfiles.git
-    then
-        echo "SSH/GitHub is not set up; using HTTPS (CRAP)"
-        git clone https://github.com/jasonbot/dotfiles.git
-    fi
-fi
-
-cd dotfiles
-git pull
-
 OS=`uname`
+DOTFILE_DIRECTORY=~/.dotfiles
 
-function configure_git() {
+function configure_git {
+    echo "------ GIT -------"
     git config --global --replace-all core.pager "less -F -X"
     git config --global --replace-all user.name "Jason Scheirer"
     if which vim
@@ -30,17 +18,39 @@ function configure_git() {
 }
 
 function install_homebrew {
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    echo "------ HOMEBREW -------"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     for package in $(cat osx_homebrew_packages.txt)
     do
         brew install $package
     done
+}
 
-    pip3 install --user powerline-status
+function install_oh_my {
+    echo "------ OH MY -------"
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+    echo "(Setting theme)"
+    sed -I "" "s/^ZSH_THEME=.*/DEFAULT_USER=$USER\nZSH_THEME=agnoster/" ~/.zshrc
 }
 
 configure_git
+install_oh_my
+
+echo "------ COPYING DOTFILES -------"
+cd ~
+if [ ! -d $DOTFILE_DIRECTORY ]
+then
+    if ! git clone git@github.com:jasonbot/dotfiles.git $DOTFILE_DIRECTORY
+    then
+        echo "SSH/GitHub is not set up; using HTTPS (CRAP)"
+        git clone https://github.com/jasonbot/dotfiles.git $DOTFILE_DIRECTORY
+    fi
+fi
+
+cd $DOTFILE_DIRECTORY
+git pull
 
 if [ $OS == "Linux" ]
 then
@@ -64,6 +74,7 @@ cd $folder
 for item in $(ls)
 do
     new_item=$(echo $item | sed s/^_/./)
+    echo $item -> $new_item
     if [ -d $item ]
     then
         cp -r $item ~/$new_item
