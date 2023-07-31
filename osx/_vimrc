@@ -1,7 +1,8 @@
 set backspace=indent,eol,start
 set encoding=utf-8
 set visualbell
-set number
+set number relativenumber
+set nu rnu
 set wrap
 set linebreak
 set textwidth=80
