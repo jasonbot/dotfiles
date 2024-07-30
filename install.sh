@@ -55,6 +55,8 @@ git pull
 if [ $OS == "Linux" ]
 then
     folder="linux"
+    # For ChimeraOS
+    gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 elif [ $OS == "Darwin" ]
 then
     # The only good minimize effect
