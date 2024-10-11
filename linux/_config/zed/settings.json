@@ -1,0 +1,62 @@
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "features": {
+    "inline_completion_provider": "none"
+  },
+  "ui_font_size": 15,
+  "ui_font_weight": 500,
+  "buffer_font_size": 12,
+  "buffer_font_weight": 600,
+  "ui_font_family": "Cantarell",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_line_height": {
+    "custom": 1.6
+  },
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+  "terminal": {
+    "line_height": {
+      "custom": 1.33
+    },
+    "font_family": "JetBrainsMono Nerd Font",
+    "font_weight": 600
+  },
+  "experimental.theme_overrides": {
+    "terminal.background": "#121212", // black (primary)
+    "terminal.foreground": "#f7f7f8ff", // white
+    "terminal.bright_foreground": "#f7f7f8ff", // white
+    "terminal.dim_foreground": "#1e2025ff",
+    "terminal.ansi.black": "#1e2025ff",
+    "terminal.ansi.bright_black": "#40434cff",
+    "terminal.ansi.dim_black": "#f7f7f8ff", // white
+    "terminal.ansi.red": "#f82871ff",
+    "terminal.ansi.bright_red": "#8e0f3aff",
+    "terminal.ansi.dim_red": "#ffa3b5ff",
+    "terminal.ansi.green": "#96df71ff",
+    "terminal.ansi.bright_green": "#457c38ff",
+    "terminal.ansi.dim_green": "#cef0b9ff",
+    "terminal.ansi.yellow": "#fee56cff",
+    "terminal.ansi.bright_yellow": "#958334ff",
+    "terminal.ansi.dim_yellow": "#fef1b7ff",
+    "terminal.ansi.blue": "#10a793ff",
+    "terminal.ansi.bright_blue": "#1a5148ff",
+    "terminal.ansi.dim_blue": "#9cd4c7ff",
+    "terminal.ansi.magenta": "#c74cecff",
+    "terminal.ansi.bright_magenta": "#682681ff",
+    "terminal.ansi.dim_magenta": "#e7abf7ff",
+    "terminal.ansi.cyan": "#08e7c5ff",
+    "terminal.ansi.bright_cyan": "#008169ff",
+    "terminal.ansi.dim_cyan": "#a9f4e1ff",
+    "terminal.ansi.white": "#f7f7f8ff", // white
+    "terminal.ansi.bright_white": "#f7f7f8ff", // white
+    "terminal.ansi.dim_white": "#87858cff"
+  }
+}
