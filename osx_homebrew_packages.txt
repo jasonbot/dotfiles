@@ -29,6 +29,7 @@ node
 pika
 pyenv
 readline
+rectangle
 redis
 rg
 rust
