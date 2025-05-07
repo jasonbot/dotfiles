@@ -35,6 +35,7 @@ redis
 rg
 rust
 snappy
+stern
 tailscale
 tmux
 toilet
