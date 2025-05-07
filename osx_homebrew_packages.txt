@@ -6,6 +6,7 @@ awscli-local
 bash
 bash-completion
 bash-git-prompt
+betterdisplay
 cassandra
 certstrap
 cmake
@@ -21,6 +22,7 @@ docker-credential-helper
 fortune
 gcc
 gh
+gimp
 git
 git-delta
 glib
@@ -29,6 +31,7 @@ go
 grep
 grpcui
 grpcurl
+inkscape
 jq
 kubectx
 kubernetes-cli
@@ -42,11 +45,13 @@ mockery
 mysql
 node
 nvm
+pika
 podman
 postgresql@14
 protobuf
 pyenv
 readline
+rectangle
 redis
 ripgrep
 rust
