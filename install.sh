@@ -1,7 +1,17 @@
 #! /bin/bash
 
+set -eux
+
 OS=`uname`
 DOTFILE_DIRECTORY=~/.dotfiles
+
+function generate_ssh_key {
+    if [ ! -f ~/.ssh/id_ed25519 ]
+    then
+        echo "Attempting to create an SSH key"
+        ssh-keygen -t ed25519
+    fi
+}
 
 function configure_git {
     echo "------ GIT -------"
@@ -12,6 +22,11 @@ function configure_git {
         git config --global core.editor vim
     else
         echo "NO VIM?"
+    fi
+    if [ -f ~/.ssh/id_ed25519.pub ]
+    then
+        git config --global gpg.format ssh
+        git config --global user.signingkey ~/.ssh/id_ed25519.pub
     fi
     git config --global --replace-all user.email "jason.scheirer@gmail.com"
     echo REMEMBER TO git config --global --replace-all user.email "work@email.com"
@@ -35,6 +50,7 @@ function install_oh_my {
     sed -I "" "s/^ZSH_THEME=.*/DEFAULT_USER=$USER\nZSH_THEME=agnoster/" ~/.zshrc
 }
 
+generate_ssh_key
 configure_git
 install_oh_my
 
