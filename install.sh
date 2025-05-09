@@ -57,6 +57,10 @@ then
     folder="linux"
     # For ChimeraOS
     gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
+    
+    # Install fonts to well known location
+    mkdir -p ~/.local/share/fonts
+    cp -r ./fonts/  ~/.local/share/fonts
 elif [ $OS == "Darwin" ]
 then
     # The only good minimize effect
@@ -64,6 +68,9 @@ then
     killall Dock
 
     folder="osx"
+
+    # Open fonts in Font Book for user to install
+    open ./fonts/*
 
     install_homebrew
 else
