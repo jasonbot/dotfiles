@@ -63,11 +63,11 @@ then
     cp -r ./fonts/  ~/.local/share/fonts
 elif [ $OS == "Darwin" ]
 then
+    folder="osx"
+
     # The only good minimize effect
     defaults write com.apple.dock mineffect -string suck
     killall Dock
-
-    folder="osx"
 
     # Open fonts in Font Book for user to install
     open ./fonts/*
