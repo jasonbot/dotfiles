@@ -9,7 +9,7 @@ white = "#F7F7F7"
 yellow = "#FDED02"
 
 [colors.cursor]
-cursor = "#f39d21"
+cursor = "#fafafa"
 text = "#000000"
 
 [colors.normal]
@@ -27,8 +27,8 @@ background = "#090300"
 foreground = "#A5A2A2"
 
 [colors.vi_mode_cursor]
-cursor = "#A5A2A2"
-text = "#A5A2A2"
+cursor = "#A2A2A2"
+text = "#A2A2A2"
 
 [font]
 size = 10
