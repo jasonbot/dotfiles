@@ -1,7 +1,5 @@
 #! /bin/bash
 
-set -eux
-
 OS=`uname`
 DOTFILE_DIRECTORY=~/.dotfiles
 
