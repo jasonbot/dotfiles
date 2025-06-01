@@ -37,6 +37,7 @@ kubectx
 kubernetes-cli
 lazydocker
 lazygit
+lima
 lua
 memcached
 minio
