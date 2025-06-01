@@ -1,0 +1,195 @@
+format = """
+[](fg:#5E5C64 bg:#241F31)\
+$os$battery$username$hostname$shell\
+[](fg:#5E5C64 bg:#241F31)\
+$directory\
+$git_branch\
+$git_status\
+$c\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nim\
+$rust\
+[](bg:#241F31 fg:#3D3846)\
+$character\
+[ ](fg:#3D3846)\
+"""
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+[os]
+style = "bg:#5E5C64 fg:#F6F5F4 bold"
+format = "[$symbol]($style)"
+disabled = false
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+
+[shell]
+style = "bg:#5E5C64 fg:#F6F5F4 bold"
+format = "[$indicator]($style)"
+disabled = false
+fish_indicator = ' 󰈺'
+powershell_indicator = ' '
+bash_indicator = ''
+zsh_indicator = ''
+
+[battery]
+format=  '[$symbol$percentage ]($style)'
+
+[[battery.display]]
+threshold = 75
+style = 'bg:#5E5C64 fg:#322c3d'
+
+# You can also replace your username with a neat symbol like  to save some space
+[username]
+show_always = false
+style_user = "bg:#5E5C64 fg:#F6F5F4 bold"
+style_root = "bg:#5E5C64 fg:#A51D2D	bold"
+format = '[ $user]($style)'
+
+[hostname]
+style = "bg:#1A5FB4 fg:#F6F5F4 bold"
+format = '[@$hostname ]($style)'
+ssh_only = true
+disabled = false
+
+[directory]
+style = "bg:#241F31 bold"
+format = "[ $path ]($style)"
+truncation_length = 0
+truncation_symbol = ""
+
+
+[c]
+symbol = " "
+style = "bg:#241F31 fg:#ededed bold"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:#81a1c1 fg:#ededed bold"
+format = '[ $symbol $context ]($style) $path'
+
+[kubernetes]
+symbol = "☸ "
+style = "bg:#81a1c1 fg:#ededed bold"
+format = '[ $symbol $context ]($style)'
+disabled = true
+
+[elixir]
+symbol = " "
+style = "bg:#241F31"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#241F31"
+format = '[ $symbol ($version) ]($style)'
+
+[git_branch]
+symbol = ""
+style = "bg:#322c3d fg:#F6F5F4 bold"
+format = '[](fg:#322c3d bg:#241F31)[$symbol $branch]($style)'
+
+[git_status]
+style = "bg:#322c3d fg:#F6F5F4 bold"
+format = '[ $all_status$ahead_behind]($style)[](fg:#322c3d bg:#241F31)'
+
+[golang]
+symbol = " "
+style = "bg:#241F31 fg:#ededed bold"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#241F31"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:#241F31 fg:#ededed bold"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#241F31 fg:#ededed bold"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#241F31 fg:#ededed bold"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = " "
+style = "bg:#241F31 fg:#ededed bold"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#241F31 fg:#ededed bold"
+format = '[ $symbol ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#F6F5F4 fg:#3D3846 bold"
+# format = '[ ♥ $time ]($style)'
+format = '[$time ]($style)'
+
+[character]
+disabled = false
+success_symbol = "[✓](bg:#3D3846 fg:#2EC27E)"
+error_symbol = "[×](bg:#3D3846 fg:#E66100)"
+# format = '[ ♥ $time ]($style)'
+format = "$symbol"

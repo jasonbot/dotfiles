@@ -25,6 +25,15 @@ function configure_git {
     then
         git config --global gpg.format ssh
         git config --global user.signingkey ~/.ssh/id_ed25519.pub
+        git config --global commit.gpgsign true
+    fi
+    if which delta
+    then
+        git config --global core.pager delta
+        git config --global interactive.diffFilter "delta --color-only"
+        git config --global delta.navigate true
+        git config --global delta.light false
+        git config --global merge.conflictstyle diff3
     fi
     git config --global --replace-all user.email "jason.scheirer@gmail.com"
     echo REMEMBER TO git config --global --replace-all user.email "work@email.com"
@@ -34,23 +43,14 @@ function install_homebrew {
     echo "------ HOMEBREW -------"
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-    for package in $(cat osx_homebrew_packages.txt)
+    for package in $(cat macos_homebrew_packages.txt)
     do
         brew install $package
     done
 }
 
-function install_oh_my {
-    echo "------ OH MY -------"
-    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-    echo "(Setting theme)"
-    sed -I "" "s/^ZSH_THEME=.*/DEFAULT_USER=$USER\nZSH_THEME=agnoster/" ~/.zshrc
-}
-
 generate_ssh_key
 configure_git
-install_oh_my
 
 echo "------ COPYING DOTFILES -------"
 cd ~
@@ -77,7 +77,7 @@ then
     cp -r ./fonts/  ~/.local/share/fonts
 elif [ $OS == "Darwin" ]
 then
-    folder="osx"
+    folder="macos"
 
     # The only good minimize effect
     defaults write com.apple.dock mineffect -string suck
