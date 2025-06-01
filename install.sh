@@ -39,6 +39,14 @@ function configure_git {
     echo REMEMBER TO git config --global --replace-all user.email "work@email.com"
 }
 
+
+function install_oh_my {
+    echo "------ OH MY -------"
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    echo "(Setting theme)"
+    sed -I "" "s/^ZSH_THEME=.*/DEFAULT_USER=$USER\nZSH_THEME=agnoster/" ~/.zshrc
+}
+
 function install_homebrew {
     echo "------ HOMEBREW -------"
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -51,6 +59,7 @@ function install_homebrew {
 
 generate_ssh_key
 configure_git
+install_oh_my
 
 echo "------ COPYING DOTFILES -------"
 cd ~
