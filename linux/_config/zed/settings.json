@@ -5,6 +5,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "disable_ai": true,
   "features": {
     "inline_completion_provider": "none"
   },
