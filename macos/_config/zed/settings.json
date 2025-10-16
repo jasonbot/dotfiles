@@ -7,22 +7,23 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "disable_ai": true,
+  "base_keymap": "VSCode",
   "ui_font_size": 14,
   "buffer_font_size": 13,
   "terminal": {
     "line_height": "standard",
-    "font_family": "JetBrainsMono Nerd Font"
+    "font_family": "JetBrainsMono Nerd Font",
+    "font_size": 12
   },
   "theme": {
     "mode": "system",
-    "light": "One Light",
+    "light": "macOS Classic Light",
     "dark": "One Dark"
   },
   "experimental.theme_overrides": {
     "terminal.background": "#1D1F21",
     "terminal.foreground": "#C5C8C6",
-    "terminalCursor.background": "#C5C8C6",
-    "terminalCursor.foreground": "#C5C8C6",
     "terminal.ansi.black": "#1D1F21",
     "terminal.ansi.blue": "#81A2BE",
     "terminal.ansi.bright_black": "#969896",
