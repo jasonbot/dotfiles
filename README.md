@@ -13,3 +13,12 @@ dotfiles.
 curl https://raw.githubusercontent.com/jasonbot/dotfiles/master/install.sh | bash
 
 ```
+
+On Windows, don't do this, do this!
+
+```powershell
+
+Set-ExecutionPolicy Bypass
+& ([scriptblock]::Create((irm "https://raw.githubusercontent.com/jasonbot/bootstrap-windows-development-machine/refs/heads/main/bootstrap.ps1")))
+
+```
