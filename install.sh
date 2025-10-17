@@ -90,6 +90,8 @@ then
 
     # The only good minimize effect
     defaults write com.apple.dock mineffect -string suck
+    # Tone back Liquid Glass
+    defaults write com.apple.SwiftUI.DisableSolarium -bool YES
     killall Dock
 
     # Open fonts in Font Book for user to install
