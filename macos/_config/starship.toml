@@ -143,10 +143,11 @@ format = '[](fg:#322c3d bg:#241F31)[$symbol $branch]($style)'
 
 # Replace $git_branch with $custom to work around reftable issue
 [custom.git_branch]
+symbol = ""
 style = "bg:#322c3d fg:#F6F5F4 bold"
 command = "git rev-parse --abbrev-ref HEAD"
 when = "git rev-parse --is-inside-work-tree"
-format = '[$output]($style)'
+format = '[](fg:#322c3d bg:#241F31)[$symbol $output]($style)'
 
 [git_status]
 style = "bg:#322c3d fg:#F6F5F4 bold"
