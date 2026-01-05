@@ -41,4 +41,5 @@
 	},
   "editor.formatOnSave": true,
   "terminal.integrated.fontSize": 12,
+  "terminal.integrated.suggest.enabled": false
 }
