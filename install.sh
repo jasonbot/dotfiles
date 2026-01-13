@@ -88,6 +88,9 @@ elif [ $OS == "Darwin" ]
 then
     folder="macos"
 
+    # Thanks, Jordan! Turn off period after two spaces.
+    defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
     # The only good minimize effect
     defaults write com.apple.dock mineffect -string suck
     # Tone back Liquid Glass
