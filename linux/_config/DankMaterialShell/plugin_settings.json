@@ -11,5 +11,10 @@
   },
   "niriWindows": {
     "enabled": true
+  },
+  "sathiAi": {
+    "enabled": true,
+    "ollamaUrl": "http://localhost:11434",
+    "aiModel": "ollama:deepseek-r1:latest"
   }
 }

@@ -1,6 +1,6 @@
 {
   "currentThemeName": "custom",
-  "currentThemeCategory": "dynamic",
+  "currentThemeCategory": "custom",
   "customThemeFile": "/home/jscheier/.config/DankMaterialShell/theme.json",
   "registryThemeVariants": {},
   "matugenScheme": "scheme-tonal-spot",
@@ -9,7 +9,7 @@
   "popupTransparency": 1,
   "dockTransparency": 1,
   "widgetBackgroundColor": "sth",
-  "widgetColorMode": "colorful",
+  "widgetColorMode": "default",
   "cornerRadius": 7,
   "niriLayoutGapsOverride": -1,
   "niriLayoutRadiusOverride": -1,
@@ -148,7 +148,7 @@
   "weatherEnabled": true,
   "networkPreference": "auto",
   "vpnLastConnected": "",
-  "iconTheme": "System Default",
+  "iconTheme": "Adwaita",
   "cursorSettings": {
     "theme": "Adwaita",
     "size": 24,
@@ -187,8 +187,8 @@
   "soundNewNotification": true,
   "soundVolumeChanged": true,
   "soundPluggedIn": true,
-  "acMonitorTimeout": 0,
-  "acLockTimeout": 0,
+  "acMonitorTimeout": 1800,
+  "acLockTimeout": 900,
   "acSuspendTimeout": 0,
   "acSuspendBehavior": 0,
   "acProfileName": "",
@@ -213,7 +213,7 @@
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
-  "terminalsAlwaysDark": false,
+  "terminalsAlwaysDark": true,
   "runDmsMatugenTemplates": true,
   "matugenTemplateGtk": true,
   "matugenTemplateNiri": true,
@@ -235,17 +235,17 @@
   "matugenTemplateDgop": true,
   "matugenTemplateKcolorscheme": true,
   "matugenTemplateVscode": true,
-  "showDock": false,
+  "showDock": true,
   "dockAutoHide": true,
   "dockGroupByApp": false,
   "dockOpenOnOverview": true,
   "dockPosition": 1,
-  "dockSpacing": 6,
-  "dockBottomGap": -100,
-  "dockMargin": 2,
-  "dockIconSize": 32,
+  "dockSpacing": 4,
+  "dockBottomGap": 32,
+  "dockMargin": 0,
+  "dockIconSize": 24,
   "dockIndicatorStyle": "circle",
-  "dockBorderEnabled": true,
+  "dockBorderEnabled": false,
   "dockBorderColor": "primary",
   "dockBorderOpacity": 0.77,
   "dockBorderThickness": 1,
@@ -328,25 +328,21 @@
           "enabled": true
         },
         {
+          "id": "sathiAi",
+          "enabled": true
+        }
+      ],
+      "centerWidgets": [
+        {
           "id": "runningApps",
           "enabled": true,
           "runningAppsCompactMode": false
         }
       ],
-      "centerWidgets": [],
       "rightWidgets": [
-        {
-          "id": "music",
-          "enabled": true
-        },
         {
           "id": "clipboard",
           "enabled": true
-        },
-        {
-          "id": "cpuUsage",
-          "enabled": true,
-          "minimumWidth": false
         },
         {
           "id": "memUsage",
@@ -538,7 +534,9 @@
       "positions": {
         "HDMI-A-3": {
           "x": 2273.59765625,
-          "y": 1260
+          "y": 1260,
+          "width": 320,
+          "height": 480
         }
       }
     },
