@@ -1,0 +1,15 @@
+{
+  "lyricsOnPanel": {
+    "enabled": true
+  },
+  "mediaPlayer": {
+    "enabled": true
+  },
+  "calculator": {
+    "enabled": true,
+    "trigger": "="
+  },
+  "niriWindows": {
+    "enabled": true
+  }
+}

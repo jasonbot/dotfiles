@@ -1,0 +1,22 @@
+{
+  "name": "Cyberpunk Electric Dark",
+  "primary": "#FFFFFF",
+  "primaryText": "#000000",
+  "primaryContainer": "#5E5C64",
+  "secondary": "#FF4DFF",
+  "surface": "#0F0F0F",
+  "surfaceText": "#F6F5F4",
+  "surfaceVariant": "#5E5C64",
+  "surfaceVariantText": "#C0BFBC",
+  "surfaceTint": "#00FFCC",
+  "background": "#000000",
+  "backgroundText": "#F0FFF0",
+  "outline": "#5E5C64",
+  "surfaceContainer": "#241F31",
+  "surfaceContainerHigh": "#5E5C64",
+  "surfaceContainerHighest": "#77767B",
+  "error": "#FF0066",
+  "warning": "#CCFF00",
+  "info": "#00FFCC",
+  "matugen_type": "scheme-expressive"
+}
