@@ -239,7 +239,7 @@
   "dockAutoHide": true,
   "dockGroupByApp": false,
   "dockOpenOnOverview": true,
-  "dockPosition": 1,
+  "dockPosition": 2,
   "dockSpacing": 4,
   "dockBottomGap": 32,
   "dockMargin": 0,
@@ -317,7 +317,7 @@
       "id": "default",
       "name": "Main Bar",
       "enabled": true,
-      "position": 0,
+      "position": 1,
       "screenPreferences": [
         "all"
       ],
@@ -499,6 +499,12 @@
           "height": 200,
           "x": 1723.3125,
           "y": 641.71875
+        },
+        "": {
+          "width": 120,
+          "height": 120,
+          "x": 0,
+          "y": 0
         }
       }
     },
@@ -537,6 +543,12 @@
           "y": 1260,
           "width": 320,
           "height": 480
+        },
+        "": {
+          "width": 160,
+          "height": 180,
+          "x": 0,
+          "y": 0
         }
       }
     },
