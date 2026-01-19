@@ -367,7 +367,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T { spawn "ptyxis" "-s"; }
     // Super+Super_L { toggle-overview; }
-    Mod+L { spawn "dms" "ipc" "call" "lock" "lock"; }
+    Mod+L allow-when-locked=true { spawn "dms" "ipc" "call" "lock" "lock"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
@@ -603,4 +603,9 @@ binds {
     XF86AudioNext { spawn "dms" "ipc" "call" "mpris" "next" ; }
     XF86AudioPrev { spawn "dms" "ipc" "call" "mpris" "previous" ; }
     XF86AudioPlay { spawn "dms" "ipc" "call" "mpris" "playPause" ; }
+}
+
+cursor {
+    xcursor-theme "Adwaita"
+    xcursor-size 24
 }
